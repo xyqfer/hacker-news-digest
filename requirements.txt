@@ -11,7 +11,7 @@ chardet==2.2.1
 Flask-SQLAlchemy==2.0
 futures==2.1.6
 gunicorn==19.1.1
-lxml==3.3.6
+lxml==4.5.0
 null==0.6.1
 pdfminer==20191125
 requests==2.20.0
