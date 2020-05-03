@@ -13,7 +13,7 @@ futures==2.1.6
 gunicorn==19.1.1
 lxml==3.3.6
 null==0.6.1
-pdfminer==20140328
+pdfminer==20191125
 psycopg2==2.7.1
 requests==2.20.0
 SQLAlchemy==0.9.4
