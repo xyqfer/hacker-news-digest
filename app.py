@@ -5,12 +5,10 @@ from datetime import datetime
 import leancloud
 from flask import Flask, jsonify, request
 from flask import render_template
-from flask_sockets import Sockets
 from leancloud import LeanCloudError
 from page_content_extractor import legendary_parser_factory
 
 app = Flask(__name__)
-sockets = Sockets(app)
 
 
 @app.route('/')
