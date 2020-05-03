@@ -6,7 +6,7 @@ from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.pdfpage import PDFPage
 from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
-from cStringIO import StringIO
+from io import StringIO
 
 from markupsafe import escape
 from .exceptions import ParseError
