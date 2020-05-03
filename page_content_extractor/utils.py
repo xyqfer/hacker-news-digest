@@ -39,7 +39,7 @@ def my_default_user_agent(name="python-requests"):
     # return "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 " \
     #        "(KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
 
-origin_build_response = requests.adapters.HTTPAdapter.build_response.im_func
+origin_build_response = requests.adapters.HTTPAdapter.build_response
 
 def my_build_response(self, req, resp):
     """Get encoding from html content instead of setting it blindly to ISO-8859-1"""
@@ -49,7 +49,7 @@ def my_build_response(self, req, resp):
                     or ['ISO-8859-1'])[-1]  # the last one overwrites the first one
     return r
 
-origin_send = requests.adapters.HTTPAdapter.send.im_func
+origin_send = requests.adapters.HTTPAdapter.send
 
 def send_with_default_args(*args, **kwargs):
     kwargs['verify'] = False
