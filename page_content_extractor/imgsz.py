@@ -14,7 +14,7 @@ __version__ = '2.1'
 __all__ = ['what', 'size', 'fromstring']
 
 
-import re, cStringIO
+import re, io
 from struct import unpack
 
 def _jpegsize(stream):
@@ -375,5 +375,5 @@ def size(filename):
 def fromstring(data):
     '''size image from string'''
     mime, callback = _type_match(data)
-    mime, x, y = callback(cStringIO.StringIO(data))
+    mime, x, y = callback(io.StringIO(data))
     return mime, x, y
