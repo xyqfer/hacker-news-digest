@@ -1,6 +1,6 @@
 #coding: utf-8
 import logging
-from urlparse import urlparse, urljoin
+from urllib.parse import urlparse, urljoin
 
 import requests
 import imgsz

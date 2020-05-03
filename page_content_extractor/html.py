@@ -2,7 +2,7 @@
 import re
 
 import logging
-from urlparse import urljoin
+from urllib.parse import urljoin
 from collections import defaultdict
 from itertools import chain
 from math import sqrt

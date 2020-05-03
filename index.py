@@ -1,6 +1,6 @@
 import logging
 from time import time
-from urlparse import urljoin
+from urllib.parse import urljoin
 from datetime import datetime
 
 from flask import (

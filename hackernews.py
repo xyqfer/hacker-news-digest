@@ -1,7 +1,7 @@
 #coding: utf-8
 import re
 import logging
-from urlparse import urljoin, urlsplit
+from urllib.parse import urljoin, urlsplit
 from datetime import datetime, timedelta
 
 from bs4 import BeautifulSoup as BS

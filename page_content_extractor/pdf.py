@@ -1,7 +1,7 @@
 #coding: utf-8
 import logging
 
-from urlparse import urljoin
+from urllib.parse import urljoin
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.pdfpage import PDFPage
 from pdfminer.converter import TextConverter

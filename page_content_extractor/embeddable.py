@@ -2,8 +2,8 @@
 import re
 import logging
 
-from urlparse import urljoin
-from urlparse import urlsplit
+from urllib.parse import urljoin
+from urllib.parse import urlsplit
 import requests
 
 from bs4 import BeautifulSoup as BS
