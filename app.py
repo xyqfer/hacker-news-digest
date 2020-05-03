@@ -23,8 +23,7 @@ def hn():
     tm = parser.get_illustration()
     return jsonify({
         "summary": parser.get_summary(summary_length),
-        "favicon": parser.get_favicon_url(),
-        "img": tm.url
+        "favicon": parser.get_favicon_url()
     })
 
 

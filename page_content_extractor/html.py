@@ -48,7 +48,7 @@ class HtmlContentExtractor(object):
         # dict uses __eq__ to identify key, while in BS two different nodes
         # will also be considered equal, DO not use that
         self.scores = defaultdict(int)
-        self.doc = BS(html)
+        self.doc = BS(html, 'html.parser')
 
         self.title = (self.doc.title.string if self.doc.title else u'') or u''
         self.article = Null
