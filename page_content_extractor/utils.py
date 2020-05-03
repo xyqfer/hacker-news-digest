@@ -16,7 +16,7 @@ def is_paragraph(s):
     except UnicodeEncodeError:
         return len(s) > 120
 
-ascii_patt = re.compile(ur'([\u0000-\u00FF]+)', re.U)
+ascii_patt = re.compile('([\u0000-\u00FF]+)', re.U)
 
 @lru_cache(maxsize=32)
 def tokenize(s):  # not using yield just for cache
