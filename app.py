@@ -7,6 +7,7 @@ from flask import Flask, jsonify, request
 from flask import render_template
 from flask_sockets import Sockets
 from leancloud import LeanCloudError
+from page_content_extractor import legendary_parser_factory
 
 app = Flask(__name__)
 sockets = Sockets(app)
@@ -17,9 +18,16 @@ def index():
     return str(datetime.now())
 
 
-@app.route('/time')
-def time():
-    return str(datetime.now())
+@app.route('/hn')
+def hn():
+    summary_length = 250
+    parser = legendary_parser_factory('https://libreboot.org/faq.html#intel')
+    tm = parser.get_illustration()
+    return jsonify({
+        "summary": parser.get_summary(summary_length),
+        "favicon": parser.get_favicon_url(),
+        "img": tm.url
+    })
 
 
 @app.route('/version')
