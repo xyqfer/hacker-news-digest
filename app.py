@@ -18,9 +18,9 @@ def index():
 
 @app.route('/hn')
 def hn():
-    summary_length = 250
-    parser = legendary_parser_factory('https://libreboot.org/faq.html#intel')
-    tm = parser.get_illustration()
+    summary_length = 500
+    parser = legendary_parser_factory(request.args.get('url'))
+    # tm = parser.get_illustration()
     return jsonify({
         "summary": parser.get_summary(summary_length),
         "favicon": parser.get_favicon_url()
