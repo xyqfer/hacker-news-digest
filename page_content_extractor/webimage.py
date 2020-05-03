@@ -3,7 +3,7 @@ import logging
 from urllib.parse import urlparse, urljoin
 
 import requests
-import imgsz
+from . import imgsz
 from backports.functools_lru_cache import lru_cache
 
 logger = logging.getLogger(__name__)
