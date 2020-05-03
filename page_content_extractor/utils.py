@@ -45,7 +45,7 @@ def my_build_response(self, req, resp):
     """Get encoding from html content instead of setting it blindly to ISO-8859-1"""
     r = origin_build_response(self, req, resp)
     if r.encoding == 'ISO-8859-1':
-        r.encoding = (requests.utils.get_encodings_from_content(r.content) \
+        r.encoding = (requests.utils.get_encodings_from_content(r.content.decode()) \
                     or ['ISO-8859-1'])[-1]  # the last one overwrites the first one
     return r
 
