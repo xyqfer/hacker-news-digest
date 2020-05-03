@@ -350,7 +350,7 @@ TYPE_MAP = { re.compile(r'^\xFF\xD8')              : ('JPEG', _jpegsize),
 def _type_match(data):
     '''type_map_match to get MIME-TYPE and callback function'''
     for rx in TYPE_MAP:
-        if rx.search(data):
+        if rx.search(data.decode()):
             return TYPE_MAP[rx]
     else:
         raise ValueError('Unable to Recognize image file header')
