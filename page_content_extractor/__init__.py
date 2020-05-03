@@ -1,5 +1,5 @@
 ﻿#coding: utf-8
-from utils import utils
+from . import utils
 utils.monkey_patch_requests()
 
 import logging
